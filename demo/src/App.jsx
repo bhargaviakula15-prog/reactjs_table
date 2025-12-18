@@ -3,10 +3,11 @@ import UserTable from "./components/UserTable";
 function App() {
   return (
     <>
-      <h2 style={{ textAlign: "center" }}>User Management</h2>
+      <h1 style={{ textAlign: "center" }}>GIGI</h1>
       <UserTable />
     </>
   );
 }
 
 export default App;
+

@@ -11,6 +11,8 @@ import {
 } from "@mui/material";
 import users from "../data/users";
 
+
+
 const UserTable = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
@@ -30,10 +32,11 @@ const UserTable = () => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell><b>ID</b></TableCell>
-              <TableCell><b>Name</b></TableCell>
-              <TableCell><b>Email</b></TableCell>
-              <TableCell><b>Role</b></TableCell>
+              <TableCell><b>UseCase Category</b></TableCell>
+              <TableCell><b>Prompts Submitted to GIGI</b></TableCell>
+              <TableCell><b>Nov 1</b></TableCell>
+              <TableCell><b>Nov 2</b></TableCell>
+              <TableCell><b>Nov 3</b></TableCell>
             </TableRow>
           </TableHead>
 
@@ -42,10 +45,11 @@ const UserTable = () => {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((user) => (
                 <TableRow key={user.id}>
-                  <TableCell>{user.id}</TableCell>
-                  <TableCell>{user.name}</TableCell>
-                  <TableCell>{user.email}</TableCell>
-                  <TableCell>{user.role}</TableCell>
+                  <TableCell>{user.usecase_category}</TableCell>
+                  <TableCell>{user.Prompt_submitted_to_gigi}</TableCell>
+                  <TableCell>{user.nov_1}</TableCell>
+                  <TableCell>{user.nov_2}</TableCell>
+                  <TableCell>{user.nov_3}</TableCell>
                 </TableRow>
               ))}
           </TableBody>
